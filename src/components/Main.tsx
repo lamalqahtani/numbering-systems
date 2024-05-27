@@ -1,11 +1,32 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
+import { decToBin } from '../helpers/convert'
 
 const Main = () => {
+    const inputRef = useRef(0);
+    const [binary, setBinary] = useState<string>("");
+    const [decimal, setDecimal] = useState<number>(0);
+    const [octal, setOctal] = useState<number>(0);
+    const [hexadecimal, setHexadecimal] = useState<string>("");
+    const onSubmit = (e: React.FormEvent<HTMLFormElement>)=>{
+        e.preventDefault();
+        const decimalNumber : number = Number.parseInt(inputRef.current.value);
+        setDecimal(decimalNumber);
+        setBinary(decimalNumber.toString(2));
+        setOctal(Number.parseInt(decimalNumber.toString(8)));
+        setHexadecimal(decimalNumber.toString(16).toUpperCase());
+    }
   return (
-    <div className=' h-full w-full flex flex-col items-center pt-10 bg-[#fafafa]'>
-        <form onSubmit={()=>console.log("submitted")}>
-            <input className='rounded-md p-2 w-full border-2 border-black' type='number' placeholder='0'/>
+    <div className=' h-full w-64 flex flex-col gap-4 pt-10'>
+        <form className='flex gap-4' onSubmit={(e)=>onSubmit(e)}>
+            <input ref={inputRef} className='rounded-md p-2 w-full border-2 border-black' type='number' min={0} placeholder='0'/>
+            <button type='submit'>submit</button>
         </form>
+        <div className=' w-full text-left'>
+        <p>Binary: {binary}</p>
+        <p>Octal: {octal}</p>
+        <p>Decimal: {decimal}</p>
+        <p>Hexadecimal: {hexadecimal}</p>
+        </div>
     </div>
   )
 }
