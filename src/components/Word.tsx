@@ -5,7 +5,7 @@ interface Props{
 }
 const Word = ({bytes}: Props) => {
   return (
-    <div className='hover:bg-gray-300 p-2 flex'>
+    <div className='hover:bg-blue-200 p-2 flex'>
         {bytes.map((byteNode)=> byteNode)}
     </div>
   )

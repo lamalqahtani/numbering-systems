@@ -20,8 +20,8 @@ const Main = () => {
   return (
     <div className=' h-full w-10/12 flex flex-col gap-4 pt-10'>
         <form className='flex gap-4' onSubmit={(e)=>onSubmit(e)}>
-            <input ref={inputRef} className='rounded-md p-2 w-full border-2 border-black' type='number' min={0} placeholder='0'/>
-            <button type='submit'>submit</button>
+            <input ref={inputRef} className='rounded-md p-2 w-full border-2 border-black' type='number' min={0} max={4294967295} placeholder='0'/>
+            <button className=' text-white bg-black px-4 rounded' type='submit'>submit</button>
         </form>
         <div className=' w-full text-left'>
         <p>Binary: {binary}</p>

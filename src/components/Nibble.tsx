@@ -5,7 +5,7 @@ interface Props{
 }
 const Nibble = ({bits}:Props) => {
   return (
-    <div className=' hover:bg-red-300 p-2 flex'>
+    <div className=' hover:bg-blue-400 p-2 flex'>
         {bits.map((bitNode)=> bitNode)}
     </div>
   )

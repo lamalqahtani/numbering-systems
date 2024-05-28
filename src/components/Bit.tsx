@@ -5,7 +5,7 @@ interface Props{
 }
 const Bit = ({bit}:Props) => {
   return (
-    <div className=' hover:bg-yellow-200 p-2'>{bit}</div>
+    <div className=' hover:bg-blue-500 p-2'>{bit}</div>
   )
 }
 
