@@ -1,5 +1,4 @@
 import React, { useRef, useState } from 'react'
-import { decToBin } from '../helpers/convert'
 import Anatomy from './Anatomy';
 
 const Main = () => {
