@@ -3,7 +3,7 @@ import { decToBin } from '../helpers/convert'
 import Anatomy from './Anatomy';
 
 const Main = () => {
-    const inputRef = useRef(0);
+    const inputRef = useRef<any>(0);
     const [binary, setBinary] = useState<string>("0");
     const [decimal, setDecimal] = useState<number>(0);
     const [octal, setOctal] = useState<number>(0);
