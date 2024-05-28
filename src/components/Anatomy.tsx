@@ -51,7 +51,7 @@ const Anatomy = ({system, value}:Props) => {
         break;
     } 
   return (
-    <div className='flex flex-col md:overflow-scroll'>
+    <div className='flex flex-col overflow-scroll'>
         <div className='flex gap-4 self-center'>
             {val}
         </div>
