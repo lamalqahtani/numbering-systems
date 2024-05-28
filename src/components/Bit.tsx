@@ -1,8 +1,11 @@
 import React from 'react'
 
-const Bit = () => {
+interface Props{
+    bit: String;
+}
+const Bit = ({bit}:Props) => {
   return (
-    <div>Bit</div>
+    <div className=' hover:bg-yellow-200 p-2'>{bit}</div>
   )
 }
 

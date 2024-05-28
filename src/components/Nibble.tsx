@@ -1,8 +1,13 @@
 import React from 'react'
 
-const Nibble = () => {
+interface Props{
+    bits: React.ReactNode[];
+}
+const Nibble = ({bits}:Props) => {
   return (
-    <div>Nibble</div>
+    <div className=' hover:bg-red-300 p-2 flex'>
+        {bits.map((bitNode)=> bitNode)}
+    </div>
   )
 }
 
