@@ -31,7 +31,7 @@ const Main = () => {
         <p>Hexadecimal: {hexadecimal}</p>
         </div>
         <option value=""></option>
-        <select className=' w-40' name="system" onChange={(e)=>setMode(e.target.value)}>
+        <select className=' w-40' name="system" onChange={(e)=>setMode(e.target.value as "bin" | "hex" | "oct" | "dec")}>
             <option value="bin">Binary</option>
             <option value="hex">Hexadecimal</option>
         </select>
